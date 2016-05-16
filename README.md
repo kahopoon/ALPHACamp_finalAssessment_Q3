@@ -9,7 +9,9 @@ From the passage, we can see, apple is talking about how app will interact with 
 ![Alt text](core_objects_2x.png?raw=true "core_ojects_2x")
 
 ##Explaining different stage of app at OS environment
-![Alt text](high_level_flow_2x.png?raw=true "high_level_flow_2x")
+![Alt text](high_level_flow_2x.png?raw=true "high_level_flow_2x")  
+
+OK, let's demonstrate in code, here we have AppDelegate and ViewController, on all functions of cycle, we print the name of function
 
 ## AppDelegate.swift
 ```swift
