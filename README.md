@@ -10,7 +10,7 @@ From the passage, we can see, apple is talking about how app will interact with 
 
 ###Explaining different stage of app at OS environment
 ![Alt text](screenshot2.png?raw=true "high_level_flow_2x")  
-
+  
 OK, let's demonstrate in code, here we have AppDelegate and ViewController, on all functions of cycle, we print the name of function
 
 ## AppDelegate.swift
