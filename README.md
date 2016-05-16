@@ -89,3 +89,14 @@ class ViewController: UIViewController {
 
 }
 ```
+## Scenario 1 - Open the app (Launch)
+![Alt text](openApp.png?raw=true "openApp")
+
+## Scenario 2 - Pause the app (pressing home button)
+![Alt text](pauseApp.png?raw=true "pauseApp")
+
+## Scenario 3 - Back to the app (resume)
+![Alt text](backToApp.png?raw=true "backToApp")
+
+## Scenario 4 - Kill the app (termination)
+![Alt text](killApp.png?raw=true "killApp")
