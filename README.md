@@ -91,12 +91,24 @@ class ViewController: UIViewController {
 ```
 ## Scenario 1 - Open the app (Launch)
 ![Alt text](openApp.png?raw=true "openApp")
+for simplicity, AppDelegate = AD, ViewController = VC.
+On app launching, the sequence is AD:didFinishLaunchingWithOptions => VC:viewDidLoad => VC:viewWillAppear => AD:applicationDidBecomeActive => VC:viewDidAppear
 
 ## Scenario 2 - Pause the app (pressing home button)
 ![Alt text](pauseApp.png?raw=true "pauseApp")
+Then, we pause the app by pressing home button, and the sequence will be AD:ApplicationWillResignActive => AD:ApplicationDidEnterBackground
 
 ## Scenario 3 - Back to the app (resume)
 ![Alt text](backToApp.png?raw=true "backToApp")
+Let's come back to the app, the sequence will be AD:ApplicationWillEnterForeground => AD:ApplicationDidBecomeActive
 
 ## Scenario 4 - Kill the app (termination)
 ![Alt text](killApp.png?raw=true "killApp")
+Ok, finally we teminate the app by closing it, and the sequence will be AD:applicationWillResignActive =>  AD:applicationDidEnterBackground => VC:viewWillDisappear => VC:viewDidDisappear => AD:applicationWillTerminate
+
+### So, what big deal if we do not care on app life cycle (AppDelegate) when we write an app?!
+Let's have a scenario 5!
+
+## Scenario 5 - Pause the app and kill the app
+![Alt text](pauseAndKill.png?raw=true "pauseAndKill")
+Ok, it's more or less like the scenario 2 that we pause the app, right? hold, it already include the kill action! what?! yes! there's nothing to be run more when you pause and kill. So in this scenario, if you have to confirmed some data is secured, you better implement something to check on the AppDelegate's ApplicationWillResignActive / ApplicationDidEnterBackgound!!!
